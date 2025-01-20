@@ -1,0 +1,113 @@
+/* Gradient background */
+.gradient {
+background: linear-gradient(90deg, #3B82F6 0%, #2563EB 100%);
+padding: 4rem 0; /* Tambahkan padding agar ada ruang di atas dan bawah */
+}
+
+/* Section beranda */
+#beranda {
+position: relative;
+overflow: hidden; /* Cegah konten meluap */
+max-height: 80vh;
+}
+
+/* Video sebagai latar belakang */
+#beranda video {
+position: absolute;
+top: 0;
+left: 0;
+width: 100%; /* Isi lebar layar */
+height: 100%; /* Isi tinggi layar */
+object-fit: cover; /* Pastikan video tidak meregang */
+z-index: 0; /* Video berada di bawah konten */
+}
+
+/* Overlay gelap untuk kontras (opsional) */
+#beranda .bg-black {
+position: absolute;
+top: 0;
+left: 0;
+width: 100%;
+height: 100%;
+background-color: rgba(0, 0, 0, 0.5); /* Transparansi */
+z-index: 1; /* Overlay di atas video */
+}
+
+/* Konten di atas video */
+#beranda .container {
+position: relative;
+z-index: 10; /* Konten berada di atas video dan overlay */
+color: white; /* Teks putih untuk kontras */
+text-align: center; /* Rata tengah */
+}
+
+/* Teks utama */
+#beranda h1 {
+margin-top: 2px;
+font-size: 16px;
+line-height: 7; /* Spasi antar garis */
+margin-bottom: 1.5rem;
+}
+
+/* Tombol */
+#beranda button {
+transition: all 0.3s ease-in-out;
+}
+
+#beranda button:hover {
+margin-top: 2cm;
+transform: scale(1.05); /* Efek zoom pada hover */
+}
+
+/* Menu default (untuk desktop) */
+#menu {
+    text-align: left; /* Default untuk desktop */
+}
+
+/* Menu ketika hamburger aktif */
+#menu.active {
+    display: flex; /* Mengubah dari "hidden" ke "flex" */
+    flex-direction: column; /* Membuat item menumpuk vertikal */
+    justify-content: center; /* Meratakan secara vertikal */
+    align-items: center; /* Meratakan secara horizontal */
+    position: absolute; /* Agar menu berada di atas */
+    top: 100%; /* Menu muncul di bawah navbar */
+    left: 0;
+    width: 100%; /* Menu memenuhi layar */
+    background-color: rgb(0, 159, 244); /* Warna latar belakang */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Tambahan bayangan */
+    z-index: 50;
+}
+
+/* Tautan dalam menu hamburger */
+#menu a {
+    display: block; /* Setiap item menempati satu baris */
+    padding: 10px 0; /* Jarak antar item */
+    text-align: justify; /* Rata tengah teks */
+    width: 100%; /* Memenuhi lebar menu */
+}
+
+/* Pastikan tombol memiliki animasi hover */
+button {
+    transition: background-color 0.3s ease;
+}
+
+@media (min-width: 767px) {
+    #beranda h1 {
+        font-size: 2rem; /* Ukuran teks lebih besar di desktop */
+    }
+    
+    #menu.active {
+        display: flex; /* Mengubah dari "hidden" ke "flex" */
+        flex-direction: center; /* Membuat item menumpuk vertikal */
+        justify-content: center; /* Meratakan secara vertikal */
+        align-items: center; /* Meratakan secara horizontal */
+        position: absolute; /* Agar menu berada di atas */
+        top: 100%; /* Menu muncul di bawah navbar */
+        left: 0;
+        width: 100%; /* Menu memenuhi layar */
+        background-color: rgb(0, 159, 244); /* Warna latar belakang */
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Tambahan bayangan */
+        z-index: 50;
+    }
+}

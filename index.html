@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="id">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="Sistem pakar berbasis Natural Language Processing untuk mendiagnosa masalah jaringan LAN dengan cepat dan akurat.">
+        <title>Sistem Pakar Identifikasi Jaringan LAN</title>
+        <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+        <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+    </head>
+
+    <body class="font-sans">
+        <nav class="fixed w-full z-50 bg-white shadow">
+            <div class="container mx-auto px-6 py-4 flex items-center justify-between">
+                <div class="flex items-center space-x-2">
+                    <img src="{{ url_for('static', filename='logo.jpg') }}" alt="Logo" class="w-8 h-8 md:w-10 md:h-10">
+                    <span class="text-xl font-bold text-blue-600">LAN Expert System</span>
+                </div>
+                
+                <button id="hamburger" class="block md:hidden text-blue-600 focus:outline-none">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+                    </svg>
+                  </button>
+                  <ul id="menu" class="hidden md:flex space-x-6 text-gray-600">
+                    <li><a href="#home" class="hover:text-blue-600">Beranda</a></li>
+                    <li><a href="#about" class="hover:text-blue-600">About</a></li>
+                    <li><a href="#faq" class="hover:text-blue-600">FAQ</a></li>
+                    <li><a href="#profil-pembuat" class="hover:text-blue-600">Profil Pembuat</a></li>
+                  </ul>
+                                
+            </div>
+        </nav>
+    </body>
+    
+    <section id="home" class="min-h-screen flex items-center justify-center relative">
+        <!-- Video Latar Belakang -->
+        <video autoplay muted loop playsinline class="absolute inset-0 w-full h-full object-cover z-0">
+            <source src="{{ url_for('static', filename='ses.mp4') }}" type="video/mp4">
+        </video>
+    
+        <!-- Konten di atas latar -->
+        <div class="container mx-auto px-6 relative z-10 text-center">
+            <h1 class="text-4xl font-bold text-white mb-8">Identifikasi Masalah Jaringan LAN</h1>
+            <div class="flex items-center justify-center space-x-4">
+                <!-- Membungkus tombol dengan tag <a> untuk mengarahkan ke konsultasi.html -->
+                <a href="/konsultasi">
+                    <button class="bg-white text-blue-600 px-8 py-3 rounded-full font-bold hover:bg-gray-100">
+                        Mulai Chat
+                    </button>
+                </a>
+            </div>
+        </div>
+    
+        <!-- Overlay Gelap (Opsional) -->
+        <div class="absolute inset-0 bg-black opacity-50 z-1"></div>
+    </section>
+
+ <!-- About Us Section -->
+<section id="about" class="relative bg-gray-50 py-20">
+    <!-- Gelombang Atas -->
+    <div class="absolute inset-x-0 top-0 -translate-y-6">
+      <svg class="hero-waves" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 24 150 28" preserveAspectRatio="none">
+        <defs>
+          <path id="wave-path" d="M-160 44c30 0 58-18 88-18s58 18 88 18 58-18 88-18 58 18 88 18v44h-352z"></path>
+        </defs>
+        <g class="wave1">
+          <use xlink:href="#wave-path" x="50" y="3" fill="#5B9BD5"></use>
+        </g>
+        <g class="wave2">
+          <use xlink:href="#wave-path" x="50" y="0" fill="#6EA8DA"></use>
+        </g>
+        <g class="wave3">
+          <use xlink:href="#wave-path" x="50" y="9" fill="#A9CCE3"></use>
+        </g>
+      </svg>
+    </div>
+  
+    <!-- Konten About -->
+    <div class="container mx-auto px-6 relative">
+      <h2 class="text-3xl font-bold text-center mb-12 text-blue-600">Tentang Sistem Pakar LAN</h2>
+      <p class="text-lg text-gray-700 leading-relaxed text-center bg-blue-50 p-6 rounded-lg shadow-lg">
+        Sistem Pakar untuk Identifikasi Jaringan Local Area Network (LAN) adalah aplikasi berbasis web yang dirancang untuk membantu mendiagnosis dan mengatasi masalah jaringan LAN secara efisien. Menggunakan teknologi Natural Language Processing (NLP), sistem ini menganalisis gejala yang diberikan oleh pengguna dan menyediakan solusi yang terperinci.
+      </p>
+    </div>
+  
+    <!-- Gelombang Bawah -->
+    <div class="absolute inset-x-0 bottom-0 translate-y-6">
+      <svg class="hero-waves" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 24 150 28" preserveAspectRatio="none">
+        <defs>
+          <path id="wave-path" d="M-160 44c30 0 58-18 88-18s58 18 88 18 58-18 88-18 58 18 88 18v44h-352z"></path>
+        </defs>
+        <g class="wave1">
+          <use xlink:href="#wave-path" x="50" y="3" fill="#5B9BD5"></use>
+        </g>
+        <g class="wave2">
+          <use xlink:href="#wave-path" x="50" y="0" fill="#6EA8DA"></use>
+        </g>
+        <g class="wave3">
+          <use xlink:href="#wave-path" x="50" y="9" fill="#A9CCE3"></use>
+        </g>
+      </svg>
+    </div>
+  </section>
+  
+
+<!-- FAQ -->
+<section id="faq" class="py-20">
+    <div class="container mx-auto px-6">
+        <h2 class="text-3xl font-bold mb-12 text-center">FAQ</h2>
+        <div class="space-y-8">
+            <div class="bg-gray-100 rounded-lg p-6 shadow-lg">
+                <h3 class="text-xl font-semibold mb-2">Apa itu Sistem Pakar Identifikasi Jaringan LAN?</h3>
+                <p class="text-gray-600">Sistem ini adalah aplikasi berbasis web yang menggunakan metode kecerdasan buatan untuk mendiagnosis masalah jaringan LAN berdasarkan input gejala dari pengguna.</p>
+            </div>
+            <div class="bg-gray-100 rounded-lg p-6 shadow-lg">
+                <h3 class="text-xl font-semibold mb-2">Bagaimana cara kerja sistem ini?</h3>
+                <p class="text-gray-600">Pengguna memasukkan gejala yang dialami, kemudian sistem menggunakan algoritma NLP untuk menganalisis dan memberikan solusi yang sesuai.</p>
+            </div>
+            <div class="bg-gray-100 rounded-lg p-6 shadow-lg">
+                <h3 class="text-xl font-semibold mb-2">Apakah data pengguna aman?</h3>
+                <p class="text-gray-600">Ya, sistem ini dirancang untuk menjaga privasi dan keamanan data pengguna sesuai dengan standar keamanan terbaru.</p>
+            </div>
+            <div class="bg-gray-100 rounded-lg p-6 shadow-lg">
+            <h3 class="text-xl font-semibold mb-2">Apakah solusi yang diberikan akurat?</h3>
+            <p class="text-gray-600">Solusi yang diberikan berdasarkan pengetahuan dari pakar jaringan dan diuji menggunakan berbagai kasus untuk memastikan akurasi.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="profil-pembuat" class="py-20 bg-gray-50">
+    <div class="max-w-6xl mx-auto px-6">
+        <h2 class="text-3xl font-bold text-center text-gray-800 mb-8">Profil Pembuat</h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <!-- Profile 1 -->
+            <div class="bg-white rounded-lg shadow-lg p-6 text-center">
+                <img class="w-32 h-32 mx-auto rounded-md mb-4 border-2 border-gray-300" src="{{ url_for('static', filename='saya.png') }}" alt="Foto Profil 1">
+                <h1 class="text-2xl font-bold text-gray-800">Hizkia Imanuel Simanjuntak</h1>
+                <h2 class="text-xl text-gray-700">202255202057</h2>
+                <h3 class="text-lg text-blue-500 mt-2">
+                    <a href="https://wa.me/6282198424487" target="_blank">No WA: 082198424487</a>
+                </h3>
+                <p class="text-gray-600 text-sm mt-4">Ketua Tim Pengembangan</p>
+            </div>
+            <!-- Profile 2 -->
+            <div class="bg-white rounded-lg shadow-lg p-6 text-center">
+                <img class="w-32 h-32 mx-auto rounded-md mb-4 border-2 border-gray-300" src="{{ url_for('static', filename='masa.jpg') }}" alt="Foto Profil 2">
+                <h1 class="text-2xl font-bold text-gray-800">Nama Pembuat 2</h1>
+                <h2 class="text-xl text-gray-700">202255202013</h2>
+                <h3 class="text-lg text-blue-500 mt-2">
+                <a href="https://wa.me/6285194044210" target="_blank">No WA: 085194044210</a>
+                </h3>
+                <p class="text-gray-600 text-sm mt-4">Anggota Tim Pengembangan</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<!-- Footer -->
+<footer class="bg-gray-800 text-white py-12">
+<div class="container mx-auto px-6">
+    <div class="text-center mb-8">
+        <h3 class="text-2xl font-bold mb-4">LAN Expert System</h3>
+        <p class="text-gray-400">Solusi cerdas untuk masalah jaringan LAN Anda.</p>
+    </div>
+    <div class="text-center">
+        <h4 class="text-lg font-semibold mb-4">Kontak</h4>
+        <ul class="space-y-2">
+            <li class="text-gray-400">Email: <a href="mailto:info@lanexpert.com" class="text-blue-400 hover:underline">info@lanexpert.com</a></li>
+            <li class="text-gray-400">Phone: (021) 1234-5678</li>
+            <li class="text-gray-400">Alamat: Jakarta, Indonesia</li>
+        </ul>
+    </div>
+</div>
+        <div class="border-t border-gray-700 mt-8 pt-8 text-center">
+            <p class="text-gray-400">&copy; 2025 LAN Expert System. All rights reserved.</p>
+        </div>
+    </div>
+</footer>
+
+<script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>   
